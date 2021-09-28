@@ -13,6 +13,8 @@ pipeline {
           steps {
             echo 'Test the repo'
             echo 'Test it again'
+            sh '''sleep 5
+'''
           }
         }
 
