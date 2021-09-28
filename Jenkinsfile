@@ -6,6 +6,7 @@ pipeline {
         stage('Build') {
           steps {
             echo 'Build the repo'
+            sh 'echo Another Placeholder.'
           }
         }
 
