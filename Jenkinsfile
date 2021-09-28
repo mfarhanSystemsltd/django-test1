@@ -7,7 +7,7 @@ pipeline {
           steps {
             sh 'echo Edited Placeholder.'
             sh 'echo Build it'
-            archiveArtifacts 'reports/junit.xml'
+            sh 'pip3 install -r requirements.txt'
           }
         }
 
