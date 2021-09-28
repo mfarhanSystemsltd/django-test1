@@ -2,8 +2,20 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        sh 'echo Edited Placeholder.'
+      parallel {
+        stage('Build') {
+          steps {
+            sh 'echo Edited Placeholder.'
+            sh 'Build it'
+          }
+        }
+
+        stage('Test') {
+          steps {
+            sh 'echo test it '
+          }
+        }
+
       }
     }
 
