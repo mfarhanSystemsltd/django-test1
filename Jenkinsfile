@@ -17,7 +17,6 @@ pipeline {
             sh 'python3 manage.py jenkins --enable-coverage'
             junit 'reports/junit.xml'
             echo 'Cobertura'
-            cobertura(classCoverageTargets: 'CompareCoverageAction', coberturaReportFile: 'target/**/cobertura/coverage*.xml')
           }
         }
 
