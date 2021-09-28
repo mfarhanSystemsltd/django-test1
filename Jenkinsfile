@@ -5,16 +5,16 @@ pipeline {
       parallel {
         stage('Build') {
           steps {
-            sh 'echo Edited Placeholder.'
-            sh 'echo Build it'
-            sh 'echo pip3 install -r requirements.txt'
+            echo 'Build it'
+            sh 'echo build build '
+            sh 'pip3 install -r requirements.txt'
           }
         }
 
         stage('Test') {
           steps {
-            sh 'echo test it '
-            sh 'echo python3 manage.py jenkins --enable-coverage'
+            sh 'echo test it'
+            sh 'python3 manage.py jenkins --enable-coverage'
             junit 'reports/junit.xml'
           }
         }
