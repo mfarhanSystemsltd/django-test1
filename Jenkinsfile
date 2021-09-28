@@ -20,6 +20,12 @@ pipeline {
           }
         }
 
+        stage('Deploy') {
+          steps {
+            echo 'Placeholder'
+          }
+        }
+
       }
     }
 
