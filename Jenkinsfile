@@ -7,7 +7,7 @@ pipeline {
           steps {
             sh 'echo Edited Placeholder.'
             sh 'echo Build it'
-            sh ' pip3 install -r requirements.txt'
+            sh 'echo pip3 install -r requirements.txt'
           }
         }
 
