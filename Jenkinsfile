@@ -18,6 +18,12 @@ pipeline {
           }
         }
 
+        stage('pytest') {
+          steps {
+            archiveArtifacts(artifacts: 'reports/junit.xml', fingerprint: true)
+          }
+        }
+
       }
     }
 
