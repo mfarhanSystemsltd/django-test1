@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       parallel {
-        stage('Build') {
+        stage('Parallel') {
           steps {
             echo 'Build it'
             sh 'echo build build '
