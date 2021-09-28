@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
           steps {
             sh 'echo Edited Placeholder.'
-            sh 'Build it'
+            sh 'echo Build it'
           }
         }
 
