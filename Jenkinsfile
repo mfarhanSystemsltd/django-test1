@@ -15,6 +15,7 @@ pipeline {
             echo 'Test it again'
             sh '''sleep 5
 '''
+            sh 'echo Success!'
           }
         }
 
