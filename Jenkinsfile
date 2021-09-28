@@ -12,6 +12,7 @@ pipeline {
         stage('Test') {
           steps {
             echo 'Test the repo'
+            echo 'Test it again'
           }
         }
 
