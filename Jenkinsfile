@@ -17,10 +17,12 @@ pipeline {
             sh 'python3 manage.py jenkins --enable-coverage'
             junit 'reports/junit.xml'
             echo 'Cobertura'
+            cobertura(coberturaReportFile: 'reports/coverage.xml')
           }
         }
 
       }
     }
+
   }
 }
