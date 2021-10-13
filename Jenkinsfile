@@ -19,7 +19,7 @@ pipeline {
          stage('Run and generate coverage test') { 
             steps {
 //                 sh 'coverage run -m pytest'
-                sh ' python3 manage.py jenkins --enable-coverage'
+                sh ' python3 manage.py jenkins --enable-coverage source=/mysite'
             }
         }
          stage('View coverage report') { 
