@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment {
-        "name= Farhan"
+        "nameMy= Farhan"
     }
     stages {
          stage('Git checkout') { 
