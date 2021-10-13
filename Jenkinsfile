@@ -1,12 +1,12 @@
 pipeline {
     agent any 
     environment {
-        "nameMy= Farhan"
+        DISABLE_AUTH = 'true'
     }
     stages {
          stage('Git checkout') { 
             steps {
-              sh "echo ${env.name}"
+              sh "echo ${env.DISABLE_AUTH}"
               git branch: 'mfarhanSystemsltd-patch-1', url: 'https://github.com/mfarhanSystemsltd/django-test1.git'
             }
         }
