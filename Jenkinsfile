@@ -20,7 +20,7 @@ pipeline {
             steps {
                 
                 sh 'coverage run manage.py'
-               sh 'coverage report -m'
+               sh 'coverage xml'
                 // sh ' python3 manage.py jenkins --enable-coverage --source=.'
             }
         }
