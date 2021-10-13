@@ -24,7 +24,7 @@ pipeline {
         }
          stage('View coverage report') { 
             steps {
-                sh 'cat reports/coverage.xml' 
+                sh 'cat reports/junit.xml' 
             }
         }
         //  stage('Plot graph') { 
@@ -34,7 +34,7 @@ pipeline {
         //  }
          stage ("Extract test results") {
              steps{
-               cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'reports/coverage.xml', conditionalCoverageTargets: '100, 0, 17', failUnhealthy: false, failUnstable: true, fileCoverageTargets: '100, 0, 0', lineCoverageTargets: '100, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '100, 0, 0', onlyStable: false, packageCoverageTargets: '100, 0, 0', sourceEncoding: 'ASCII', zoomCoverageChart: false
+               cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'reports/junit.xml', conditionalCoverageTargets: '100, 0, 17', failUnhealthy: false, failUnstable: true, fileCoverageTargets: '100, 0, 0', lineCoverageTargets: '100, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '100, 0, 0', onlyStable: false, packageCoverageTargets: '100, 0, 0', sourceEncoding: 'ASCII', zoomCoverageChart: false
              }
         }
     }
