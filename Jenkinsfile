@@ -26,7 +26,7 @@ pipeline {
         }
          stage('View coverage report') { 
             steps {
-                sh "junit 'reports/junit.xml'" 
+            junit 'reports/junit.xml'
             }
         }
         //  stage('Plot graph') { 
