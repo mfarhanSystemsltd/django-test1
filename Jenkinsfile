@@ -4,6 +4,11 @@ pipeline {
         DISABLE_AUTH = 'true'
     }
     stages {
+        stage('Clean workspace'){
+            steps{
+                cleanWs();
+            }
+        }
          stage('Git checkout') { 
             steps {
               sh "echo ${env.DISABLE_AUTH}"
