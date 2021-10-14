@@ -29,11 +29,11 @@ pipeline {
                 // sh ' python3 manage.py jenkins --enable-coverage --source=.'
             }
         }
-         stage('View coverage report') { 
-            steps {
-            junit 'reports/junit.xml'
-            }
-        }
+//          stage('View coverage report') { 
+//             steps {
+//             junit 'reports/junit.xml'
+//             }
+//         }
         //  stage('Plot graph') { 
         //      steps {
         //      cobertura autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'reports/coverage.xml', conditionalCoverageTargets: '70, 0, 0', failUnhealthy: false, failUnstable: false, lineCoverageTargets: '80, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '80, 0, 0', onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
